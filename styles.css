@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    height: 400px;
+    
+    
+    
+}
+
+.cell {
+    display: flex;
+    background-color: white;
+    border: .5px solid black;
+    
+}
