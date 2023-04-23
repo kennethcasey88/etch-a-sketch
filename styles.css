@@ -1,23 +1,38 @@
 body {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
+    justify-content: space-between;
+    background-color: black;
+    color: white
+    
+}
+#header {
+    font-family: 'roboto', sans-serif;
+    font-size: 52px;
+    font-style: italic;
+    text-align: center;
+    color: lime;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: green;
+    text-shadow: 3px 3px green;
 }
 #container {
     display: flex;
+    flex-direction: column;
+}
+#drawpad {
+    display: flex;
     flex-wrap: wrap;
+    background-color: white;
     width: 400px;
     height: 400px;
-    
-    
-    
 }
 
 .cell {
-    display: flex;
-    background-color: white;
+    
     border: .5px solid black;
     
+}
+
+.cell.active {
+    background-color: black;
 }
