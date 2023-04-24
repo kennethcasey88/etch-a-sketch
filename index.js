@@ -1,6 +1,9 @@
 let i;
 const container = document.querySelector('#drawpad');
 const cells = document.querySelectorAll('.grid');
+const rangeIn = document.querySelector('input');
+const userInfo = document.querySelector('.grid-size');
+const applyBtn = document.querySelector('.apply');
 
 let grid;
 let user = 16;
@@ -9,6 +12,22 @@ let cellWH;
 let cellColor = '#FFFFFF';
 
 createGrid(user);
+
+function reset() {
+    while(container.firstChild) {
+        container.removeChild(container.lastChild);
+    }
+    createGrid(user);
+}
+
+rangeIn.addEventListener('input', function (e) {
+    user = e.target.value;
+    userInfo.textContent = `${user}x${user}`;
+});
+
+applyBtn.addEventListener('click', function () {
+    reset();
+});
 
 function createGrid(input) {
     cellWH = cellArea(input);
